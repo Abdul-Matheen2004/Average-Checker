@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average Check</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500&display=swap');
+    </style>
+</head>
+
+<body>
+    <section id="page" class="content-box animate-bottom" style="display: block">
+        <div id="rows"></div>
+        <span><h1><strong>Welcome to Average Checker</strong></h1></span>
+        <div class="dropdown">
+            <button class="dropbtn">Please enter the Grade</button>
+            <div class="dropdown-content">
+                <a href="#" onclick="run(7) ">7   </a>
+                <a href="#" onclick="run(8) ">8   </a>
+                <a href="#" onclick="run(9) ">9   </a>
+                <a href="#" onclick="run(10-1)">10-A</a>
+                <a href="#" onclick="run(10-2)">10-B</a>
+                <a href="#" onclick="run(11-1)">11-A</a>
+                <a href="#" onclick="run(11-2)">11-B</a>
+                <a href="#" onclick="run(12-1)">12-A</a>
+                <a href="#" onclick="run(12-1)">12-B</a>
+            </div>
+        </div>
+    </section>
+    <button class="open-button" onclick="openForm()" style="display: none"><i class="fas fa-calculator"></i></button>
+    <div class="form-popup" id="myForm">
+        <form class="form-container">
+            <h1>Calculate</h1>
+            <section class="ins-outs">
+                <div class="input">
+                    <input type="number" placeholder="original marks" min="0" max="300" class="form-control">
+                    <input type="number" placeholder="original marks out of" min="0" max="300" class="form-control">
+                </div>
+                <div class="output">
+                    <h2 id="output-text">60</h2>
+                    <h2 id="fixed">100</h2>
+                </div>
+            </section>
+            <button type="submit" class="btn">Calculate</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+</body>
+
+</html>
